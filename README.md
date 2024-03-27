@@ -25,7 +25,7 @@ same location as main.exe. To create client_secrets.json, follow the steps below
 5. Choose "Desktop app" as the application type.
 6. Fill in other required details (such as the name) and click "Create."
 7. Download the credentials file (JSON) and rename it to client_secrets.json.
-8. Then, you can use this client_secrets.json file in your script.
+8. Save the file in the folder dist/main
 
 ## Create Test Users
 Test users need to be created with the email of the email you want to analyze.
