@@ -21,53 +21,6 @@ def extract_unsubscribe_link(email_data):
             return unsubscribe_links
     return None
 
-# def initiate_oauth_flow():
-#     """Initiates the OAuth flow to obtain credentials and saves them to client_secrets.json."""
-#     if not os.path.exists(CLIENT_SECRETS_FILE):
-#         # If client_secrets.json does not exist, initiate OAuth flow to create it
-#         flow = InstalledAppFlow.from_client_secrets_file(
-#             'your_client_secret_file.json', SCOPES)
-#         creds = flow.run_local_server(port=0)
-
-#         # Save the credentials to token.json
-#         with open('token.json', 'w') as token:
-#             token.write(creds.to_json())
-
-#         # Save the client secrets to client_secrets.json
-#         with open(CLIENT_SECRETS_FILE, 'w') as client_secrets_file:
-#             json.dump(flow.client_config, client_secrets_file)
-
-#     else:
-#         # If client_secrets.json exists, load the credentials from token.json
-#         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-
-#     return creds
-
-# def initiate_oauth_flow():
-#     """Initiates the OAuth flow to obtain credentials and saves them to client_secrets.json."""
-#     if not os.path.exists(CLIENT_SECRETS_FILE):
-#         # If client_secrets.json does not exist, initiate OAuth flow to create it
-#         flow = InstalledAppFlow.from_client_secrets_file(
-#             'your_client_secret_file.json', SCOPES)
-#         creds = flow.run_local_server(port=0)
-
-#         # Save the credentials to token.json
-#         with open('token.json', 'w') as token:
-#             token.write(creds.to_json())
-
-#         # Wrap client config with "installed" key
-#         client_config_wrapped = {"installed": flow.client_config}
-
-#         # Save the client secrets to client_secrets.json with "installed" key
-#         with open(CLIENT_SECRETS_FILE, 'w') as client_secrets_file:
-#             json.dump(client_config_wrapped, client_secrets_file)
-
-#     else:
-#         # If client_secrets.json exists, load the credentials from token.json
-#         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-
-#     return creds
-
 def analyze_emails():
     """Analyzes the user's latest 1000 emails and tracks sender statistics."""
     creds = None
